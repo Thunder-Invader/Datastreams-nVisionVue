@@ -1,28 +1,129 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <div class="wrapper">
+      <div class="sidebar">
+              <h2>Datastreams</h2>
+              <ul>                
+                  <li><router-link to="/Dashboard"><i class="fas"></i>Dashboard</router-link></li>
+                  <li><router-link to="/Documents"><i class="fas"></i>Documenten</router-link></li>
+                  <li><a href="#"><i class="fas"></i>Berichten</a></li>
+                  <li><a href="#"><i class="fas"></i>Bronnen</a></li>
+                  <li><router-link to="/Sending"><i class="fas"></i>Bestanden delen</router-link></li>                  
+              </ul> 
+              <div className="social_media">
+                <a href="#"><i className="fab"></i>Uitloggen</a>
+              </div>
+        </div>
+          <div>
+            <router-view/>
+          </div>
   </div>
+</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  p {
+    font-family: "Proxima Nova", Times, serif;
+  }
+  
+  h1 {
+    font-family: "Proxima Nova", Times, serif;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: "Proxima Nova", Times, serif;
+    font-weight: bold;
+  }
+
+  body{
+     background-color: #EFF3F8;
+  }
+  
+  .wrapper{
+    display: flex;
+    position: relative;
+  }
+  
+  .wrapper .sidebar{
+    width: 200px;
+    height: 100%;
+    background: #33617B;
+    padding: 30px 0px;
+    position: fixed;
+  }
+  
+  .wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }    
+  
+  .wrapper .sidebar ul li a{
+    color: #ffffff;
+    display: block;
+  }
+  
+  .wrapper .sidebar ul li a .fas{
+    width: 25px;
+  }
+  
+  .wrapper .sidebar ul li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+      
+   
+  .wrapper .sidebar .social_media{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .wrapper .sidebar .social_media a{
+    text-align: center;
+    margin: 0 5px;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .wrapper .main_content{
+    width: 100%;
+    margin-left: 200px;
+  }
+  
+  .wrapper .main_content .header{
+    padding: 20px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+  }
+  
+  .wrapper .main_content .info{
+    margin: 20px;
+    color: #717171;
+    line-height: 25px;
+  }
+  
+  .wrapper .main_content .info div{
+    margin-bottom: 20px;
+  }
 </style>
