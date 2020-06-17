@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2 class="confirmation">Bestanden succesvol verstuurd</h2>
-    <button>Terug naar dashboard</button>
   </div>
 </template>
 

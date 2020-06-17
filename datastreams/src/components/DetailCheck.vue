@@ -1,7 +1,6 @@
 <template>
   <div>
      <h2>Gegevens controleren</h2>
-     <button>Volgende</button>
   </div>
 </template>
 

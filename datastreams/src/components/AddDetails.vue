@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>Kies de bestanden</h2>
-    <button>Volgende</button>
   </div>
 </template>
 
