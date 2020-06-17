@@ -10,8 +10,8 @@
                   <li><a href="#"><i class="fas"></i>Bronnen</a></li>
                   <li><router-link to="/Sending"><i class="fas"></i>Bestanden delen</router-link></li>                  
               </ul> 
-              <div className="social_media">
-                <a href="#"><i className="fab"></i>Uitloggen</a>
+              <div className="log_out">
+                <a href="#"><i Name="fab"></i>Uitloggen</a>
               </div>
         </div>
           <div>
@@ -31,17 +31,32 @@
   }
 
   p {
-    font-family: "Proxima Nova", Times, serif;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 13px;
   }
   
   h1 {
-    font-family: "Proxima Nova", Times, serif;
+    font-family: 'proxima-nova', sans-serif;
     font-weight: bold;
+    font-size: 28px;
   }
 
   h2 {
-    font-family: "Proxima Nova", Times, serif;
+    font-family: 'proxima-nova', sans-serif;
     font-weight: bold;
+    font-size: 16px;
+  }
+
+  li {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  a {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
   }
 
   body{
@@ -89,7 +104,7 @@
   }
       
    
-  .wrapper .sidebar .social_media{
+  .wrapper .sidebar .log_out{
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -97,7 +112,7 @@
     display: flex;
   }
   
-  .wrapper .sidebar .social_media a{
+  .wrapper .sidebar .log_out a{
     text-align: center;
     margin: 0 5px;
     color: #ffffff;

@@ -1,14 +1,15 @@
 <template>
       <div class="container">
-          <h1>{this.props.title}</h1>
+          <h1>{{ title }}</h1>
+          <slot></slot>
       </div>
 </template>
 
 <script>
 export default {
   name: 'Container',
-  props: {
-  }
+  props: ['title'],
+  template: '<h1>{{ title }}</h1>'
 }
 </script>
 

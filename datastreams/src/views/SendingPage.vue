@@ -1,7 +1,7 @@
 <template>
-  <Container>
+  <Container title="Bestanden delen">
     <div>
-      <h1>Sending test</h1>
+      <h2>Sending test</h2>
       <SendingFiles/>
     </div>
   </Container>

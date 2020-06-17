@@ -1,8 +1,8 @@
 <template>
-  <Container>
+  <Container title="Dashboard">
     <div id="index">
       <img alt="Vue logo" src="../assets/logo.png">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <app-text msg="Welcome to Your Vue.js App"/>
     </div>
   </Container>
 </template>
@@ -15,7 +15,7 @@ export default {
   name: 'index',
   components: {
       Container,
-      HelloWorld
+      'app-text': HelloWorld
   }
 }
 </script>
