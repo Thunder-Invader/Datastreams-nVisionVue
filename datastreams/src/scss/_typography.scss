@@ -1,0 +1,27 @@
+//Font files
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src:  url(../assets/fonts/ProximaNova-Regular.woff2) format("woff2"),
+    url(../assets/fonts/ProximaNova-Regular.woff) format("woff"),
+    
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src:  url(../assets/fonts/ProximaNova-Bold.woff2) format("woff2"),
+    url(../assets/fonts/ProximaNova-Bold.woff) format("woff"),
+    
+}
+
+// font
+$font-primary: 'ProximaNova-Regular', Arial, Arial, Helvetica, sans-serif;
+$font-bold: 'ProximaNova-Bold', Arial, Arial, Helvetica, sans-serif;
+
+//font-sizes
+$button-font-size: 1.125em;
+
+h1, h2, h3, h4, h5, h6, button, label {
+    font-family: $font-primary;
+    margin: 0;
+    padding: 0;
+}
