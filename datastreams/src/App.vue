@@ -14,11 +14,11 @@
               <div class="log_out">
                 <a href="#"><i Name="fab"></i>Uitloggen<img class="out" src="./assets/img/log_out.svg"></a>
               </div>
-        </div>
+      </div>
           <div>
             <router-view/>
           </div>
-          </div>
+    </div>
   </div>
 </div>
 </template>
