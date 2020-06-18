@@ -72,7 +72,7 @@
   }
   
   .wrapper .sidebar{
-    width: 200px;
+    width: 273px;
     height: 100%;
     background: #33617B;
     padding: 30px 0px;
