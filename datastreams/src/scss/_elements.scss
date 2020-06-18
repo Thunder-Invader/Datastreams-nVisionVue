@@ -1,0 +1,10 @@
+.btn-primary {
+    height: 35px;
+    background-color: $primary-blue;
+    background-image: linear-gradient(to right, $secondary-green , $secondary-blue);
+    color: #fff;
+    border-radius: 20px;
+    min-width: 200px;
+    max-width: 200px;
+    border: none;
+}
