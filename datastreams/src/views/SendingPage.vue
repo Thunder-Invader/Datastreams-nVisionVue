@@ -5,12 +5,16 @@
       <AddDetails v-show="details"/>
       <DetailCheck v-show="check"/>
       <Confirmation v-show="confirm"/>
-      <button v-show="sending" @click="firstStep">Volgende</button>
-      <button v-show="details" @click="secondStep">Volgende</button>
-      <button v-show="details" @click="backOne">terug</button>
-      <button v-show="check" @click="thirdStep">Volgende</button>
-      <button v-show="check" @click="backTwo">terug</button>
-      <button v-show="confirm"><router-link to="/Dashboard">Terug naar dashboard</router-link></button>
+      <div class="next">
+      <button class= "btn-primary" v-show="sending" @click="firstStep">Volgende</button>
+      <button class= "btn-primary" v-show="details" @click="secondStep">Volgende</button>
+      <button class= "btn-primary" v-show="check" @click="thirdStep">Volgende</button>     
+      <button class= "btn-primary" v-show="confirm"><router-link to="/Dashboard">Terug naar dashboard</router-link></button>
+      </div>
+      <div class="back">
+        <button class= "btn-primary" v-show="details" @click="backOne">terug</button>
+        <button class= "btn-primary" v-show="check" @click="backTwo">terug</button>
+      </div>
     </div>
   </Container>
 </template>
@@ -74,5 +78,17 @@ export default {
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+  }
+
+  .next{
+    position: absolute;
+    bottom: -17px;
+    right: 120px;
+  }
+
+  .back{
+    position: absolute;
+    bottom: -17px;
+    right: 340px;
   }
 </style>

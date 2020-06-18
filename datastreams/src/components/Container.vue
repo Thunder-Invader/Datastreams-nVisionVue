@@ -19,7 +19,6 @@ export default {
 <style scoped>
 .container{
 padding-left: 273px;
-
 }
 
 .header{
