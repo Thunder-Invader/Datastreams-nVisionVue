@@ -1,5 +1,6 @@
 <template>
 <div>
+  <div class="background">
   <div class="wrapper">
       <div class="sidebar">
               <h2>Datastreams</h2>
@@ -16,6 +17,7 @@
         </div>
           <div>
             <router-view/>
+          </div>
           </div>
   </div>
 </div>
@@ -60,9 +62,10 @@
   }
 
   body{
-     background-color: #EFF3F8;
+    background-color: #E1E8F2;
   }
-  
+
+
   .wrapper{
     display: flex;
     position: relative;

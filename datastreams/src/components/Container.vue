@@ -1,7 +1,9 @@
 <template>
       <div class="container">
+        <div class="header">
           <h1>{{ title }}</h1>
           <slot></slot>
+        </div>
       </div>
 </template>
 
@@ -16,6 +18,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-margin-left: 200px;
+padding-left: 200px;
+
+}
+
+.header{
+  padding-left: 65px;
+  padding-top: 70px;
+  padding: 65px;
+  padding-bottom: 70px;
 }
 </style>

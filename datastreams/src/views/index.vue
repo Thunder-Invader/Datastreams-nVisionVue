@@ -1,7 +1,6 @@
 <template>
   <Container title="Dashboard">
     <div id="index">
-      <img alt="Vue logo" src="../assets/logo.png">
       <app-text msg="Welcome to Your Vue.js App"/>
     </div>
   </Container>

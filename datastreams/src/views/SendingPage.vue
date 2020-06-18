@@ -1,6 +1,6 @@
 <template>
   <Container title="Bestanden delen">
-    <div>
+    <div class="window">
       <SendingFiles v-show="sending"/>
       <AddDetails v-show="details"/>
       <DetailCheck v-show="check"/>
@@ -66,5 +66,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .window{
+    background-color: white;
 
+    
+  }
 </style>
