@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1530px;
 
     .dashboard__component__items__item {
         display: flex;
@@ -90,7 +91,6 @@
             border-bottom: 1px solid #ddd;
 
             &:first-child {
-                width: 10rem;
                 padding-right: 0.5rem;
             }
 

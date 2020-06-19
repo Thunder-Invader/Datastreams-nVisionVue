@@ -191,12 +191,21 @@
                 <tr>
                   <td>6-8-2020</td>
                   <td>Loonstrook Ikea</td>
-                  <td>X</td>
+                  <td>
+                    <img src="../assets/svg/gear.svg" alt="x" class="dashboard__component__reminders__settings">
+                  </td>
                 </tr>
               </table>
             </div>
             <div class="dashboard__component__content__calendar">
-              Lorem Ipsum
+              <DatePicker
+                ref="datepicker"
+                :is-required="true"
+                is-inline
+                is-expanded
+                color="gray"   
+                :attributes="attributes"         
+              />
             </div>
           </div>
           <button class="dashboard__component__action dashboard__component__action--no-center btn-primary">
@@ -210,12 +219,27 @@
 
 <script>
 import Container from '../components/Container.vue'
+import DatePicker from 'v-calendar/lib/components/date-picker.umd'
 
 export default {
   name: 'Dashboard',
   components: {
-      Container
+      Container,
+      DatePicker
+  },
+  data() {
+  return {
+    attributes: [
+        {
+          key: "full",
+          highlight: {
+            color: "blue",
+            fillMode: "solid"
+          },
+          dates: { start: new Date(2020, 5, 15), end: new Date(2020, 5, 22) }
+        }]
   }
+}
 }
 </script>
 
