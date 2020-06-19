@@ -13,6 +13,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-  padding: 70px 65px;
+  padding: 70px 344px;
 }
 </style>
