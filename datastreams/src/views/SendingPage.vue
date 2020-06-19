@@ -9,7 +9,7 @@
       <button class= "btn-primary" v-show="sending" @click="firstStep">Volgende</button>
       <button class= "btn-primary" v-show="details" @click="secondStep">Volgende</button>
       <button class= "btn-primary" v-show="check" @click="thirdStep">Volgende</button>     
-      <button class= "btn-primary" v-show="confirm"><router-link to="/Dashboard">Terug naar dashboard</router-link></button>
+      <button class= "btn-primary" v-show="confirm"><router-link class="path" to="/Dashboard">Terug naar dashboard</router-link></button>
       </div>
       <div class="back">
         <button class= "btn-primary" v-show="details" @click="backOne">terug</button>
@@ -90,5 +90,10 @@ export default {
     position: absolute;
     bottom: -17px;
     right: 340px;
+  }
+
+  .path{
+    text-decoration: none;
+    color: white;
   }
 </style>
