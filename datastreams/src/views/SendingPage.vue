@@ -91,9 +91,4 @@ export default {
     bottom: -17px;
     right: 340px;
   }
-
-  .path{
-    text-decoration: none;
-    color: white;
-  }
 </style>
