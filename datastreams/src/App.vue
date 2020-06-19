@@ -2,7 +2,7 @@
 <div>
   <div class="background">
   <div class="wrapper">
-      <div class="navigation">
+      <div class="navigation" v-bind:class="[!menuState ? 'navigation--collapsed' : 'navigation--expanded']">
               <div><img class="logo" alt="Datastreams logo" src="./assets/img/Datastreams_logo.png"></div>
               <ul>                
                   <router-link to="/Dashboard"><li><img class="icon" src="./assets/img/dashboard.svg">Dashboard</li></router-link>
@@ -15,6 +15,7 @@
                 <a href="#">Uitloggen<img class="out" src="./assets/img/log_out.svg"></a>
               </div>
       </div>
+      <div class="fade" v-bind:class="{'fade--active':menuState}" />   
           <div>
             <router-view/>
           </div>

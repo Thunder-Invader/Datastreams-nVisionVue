@@ -42,7 +42,8 @@
     text-decoration: none;
   }
   
-  .wrapper .navigation ul a li:hover
+  .wrapper .navigation ul a li:hover,
+  .wrapper .navigation ul a li:focus
   {
     background-color: rgba(255, 255, 255, 0.5);
   }   
@@ -82,5 +83,24 @@
   
   .wrapper .main_content .info div{
     margin-bottom: 20px;
+  }
+
+  .fade {
+    z-index: 998;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background-color .5s;
+  }
+
+  .fade--active {
+    pointer-events: all;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  .router-link-active {
+    width: 17.1rem;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
