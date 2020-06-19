@@ -71,10 +71,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .window{
+    position: relative;
     width: 78vw;
-    height: 80vh;
-    left: 338px;
-    top: 119px;
+    height: 83vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -82,13 +81,13 @@ export default {
 
   .next{
     position: absolute;
-    bottom: calc(11% - 3px);
+    bottom: calc(0% - 17.5px);
     right: 120px;
   }
 
   .back{
     position: absolute;
-    bottom: calc(11% - 3px);
+    bottom: calc(0% - 17.5px);
     right: 340px;
   }
 </style>

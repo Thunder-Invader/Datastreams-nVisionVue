@@ -17,7 +17,7 @@
       </div>
       <div class="fade" v-bind:class="{'fade--active':menuState}" />   
     </div>
-    <div>
+    <div class="content">
        <router-view/>
     </div>
   </div>

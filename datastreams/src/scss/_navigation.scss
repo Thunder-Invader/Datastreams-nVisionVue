@@ -1,6 +1,5 @@
   .logo{
     width: 70%;
-    height: 70%;
     padding: 40px 0px 50px 40px;
   }
 
@@ -17,12 +16,12 @@
   
   .wrapper{
     display: flex;
-    position: relative;
+    //position: absolute;
   }
   
   .wrapper .navigation{
     width: 273px;
-    height: 100vh;
+    height: 100%;
     background: #33617B;
     padding: 30px 0px;
     position: fixed;
@@ -102,3 +101,6 @@
     background-color: rgba(255, 255, 255, 0.5);
   }
 
+  .content{
+    padding-left: 273px;
+  }
