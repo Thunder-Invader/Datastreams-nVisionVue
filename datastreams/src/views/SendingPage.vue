@@ -82,13 +82,13 @@ export default {
 
   .next{
     position: absolute;
-    bottom: -17px;
+    bottom: calc(6% - 2px);
     right: 120px;
   }
 
   .back{
     position: absolute;
-    bottom: -17px;
+    bottom: calc(6% - 2px);
     right: 340px;
   }
 </style>
