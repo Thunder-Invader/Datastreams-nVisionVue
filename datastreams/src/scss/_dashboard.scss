@@ -55,10 +55,54 @@
         }
     }
 
+    .dashboard__component__action--no-center {
+        bottom: calc(0% - 17.5px);
+        left: 50px;
+    }
+
     .dashboard__component__add {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .dashboard__component__content {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .dashboard__component__content__reminders {
+        max-width: 350px;
+
+        img,
+        svg {
+            max-height: 12px;
+            fill: red;
+        }
+
+        td {
+            width: auto;
+            height: 30px;
+            padding-right: 1rem;
+            font-weight: normal;
+            white-space: nowrap;
+            border-bottom: 1px solid #ddd;
+
+            &:first-child {
+                width: 10rem;
+                padding-right: 0.5rem;
+            }
+
+            &:last-child {
+                width: 1rem;
+                padding-right: 0rem;
+            }
+        }
+
+        th {
+            font-weight: bold;
+            text-align: left;
+        }
     }
 }
