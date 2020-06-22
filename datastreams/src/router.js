@@ -4,6 +4,7 @@ import Messages from './views/Messages.vue'
 import Dashboard from './views/Dashboard.vue'
 import DocumentsPage from './views/DocumentsPage.vue'
 import SendingPage from './views/SendingPage.vue'
+import Sources from './views/Sources.vue'
 
 Vue.use(VueRouter)
 
@@ -11,7 +12,8 @@ const routes = [
   { path: '/Dashboard', component: Dashboard },
   { path: '/Documents', component: DocumentsPage },
   { path: '/Sending', component: SendingPage },
-  { path: '/Messages', component: Messages }
+  { path: '/Messages', component: Messages },
+  { path: '/Sources', component: Sources}
 ]
 
 const router = new VueRouter({
