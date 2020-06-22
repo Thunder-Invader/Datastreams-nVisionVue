@@ -84,7 +84,7 @@
               </div>
             </div>
           </div>
-          <router-link to="/Berichten">
+          <router-link to="/Messages">
             <button class="dashboard__component__action btn-primary">
                 Ga naar mijn berichten
             </button>

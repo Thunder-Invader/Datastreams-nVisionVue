@@ -1,14 +1,17 @@
 <template>
   <Container title="Berichten">
-    Berichten
+    <h1>Berichten</h1>
+    <div></div>
   </Container>
 </template>
 
 <script>
+import Container from '../components/Container.vue'
+
 export default {
-  name: 'DocumentsPage',
+  name: 'Messages',
   components: {
-    
+    Container
   }
 };
 </script>
