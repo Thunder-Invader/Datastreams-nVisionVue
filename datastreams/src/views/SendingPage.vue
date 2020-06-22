@@ -1,5 +1,6 @@
 <template>
   <Container title="Bestanden delen">
+    <h1>Bestanden delen</h1>
     <div class="window">
       <SendingFiles v-show="sending"/>
       <AddDetails v-show="details"/>

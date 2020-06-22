@@ -1,7 +1,7 @@
 <template>
   <Container title="Documenten">
-    <div>
-      <h2>DOC TEST</h2>
+    <h1>Documenten</h1>
+    <div>   
     </div>
     <FilterBlock/>
     <DocumentBlock/>
