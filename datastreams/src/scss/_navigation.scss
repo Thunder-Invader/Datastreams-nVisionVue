@@ -1,58 +1,63 @@
+  .logo{
+    width: 70%;
+    padding: 40px 0px 50px 40px;
+  }
+
+  .icon{
+    vertical-align: middle;
+    padding-left: 35px;
+    padding-right: 20px;
+  }
+
+  .out{
+    vertical-align: middle;
+    padding-left: 20px;
+  }
+  
   .wrapper{
     display: flex;
-    // position: relative;
+    //position: absolute;
   }
   
   .wrapper .navigation{
-    width: 200px;
-    height: 100vh;
+    width: 273px;
+    height: 100%;
     background: #33617B;
     padding: 30px 0px;
-    // position: fixed;
+    position: fixed;
   }
   
-  .wrapper .navigation h2{
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .wrapper .navigation ul li{
-    padding: 15px;
-    border-bottom: 1px solid #cccccc;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    border-top: 1px solid rgba(255,255,255,0.05);
+  .wrapper .navigation ul a li{
+    padding-bottom: 22px;
+    padding-top: 22px;
+    color: white;
   }    
   
-  .wrapper .navigation ul li a{
+  .wrapper .navigation ul a{
     color: #ffffff;
     display: block;
+    text-decoration: none;
   }
   
-  .wrapper .navigation ul li a .fas{
-    width: 25px;
-  }
-  
-  .wrapper .navigation ul li:hover{
+  .wrapper .navigation ul a li:hover,
+  .wrapper .navigation ul a li:focus
+  {
     background-color: rgba(255, 255, 255, 0.5);
-  }
-      
+  }   
    
   .wrapper .navigation .log_out{
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 30px;
     display: flex;
   }
   
   .wrapper .navigation .log_out a{
     text-align: center;
-    margin: 0 5px;
     color: #ffffff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 30px;
   }
   
   .wrapper .main_content{
@@ -75,4 +80,27 @@
   
   .wrapper .main_content .info div{
     margin-bottom: 20px;
+  }
+
+  .fade {
+    z-index: 998;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background-color .5s;
+  }
+
+  .fade--active {
+    pointer-events: all;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  .router-link-active {
+    width: 17.1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .content{
+    padding-left: 273px;
   }

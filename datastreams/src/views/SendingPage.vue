@@ -5,12 +5,16 @@
       <AddDetails v-show="details"/>
       <DetailCheck v-show="check"/>
       <Confirmation v-show="confirm"/>
-      <button v-show="sending" @click="firstStep">Volgende</button>
-      <button v-show="details" @click="secondStep">Volgende</button>
-      <button v-show="details" @click="backOne">terug</button>
-      <button v-show="check" @click="thirdStep">Volgende</button>
-      <button v-show="check" @click="backTwo">terug</button>
-      <button v-show="confirm"><router-link to="/Dashboard">Terug naar dashboard</router-link></button>
+      <div class="next">
+      <button class= "btn-primary" v-show="sending" @click="firstStep">Volgende</button>
+      <button class= "btn-primary" v-show="details" @click="secondStep">Volgende</button>
+      <button class= "btn-primary" v-show="check" @click="thirdStep">Volgende</button>     
+      <button class= "btn-primary" v-show="confirm"><router-link class="path" to="/Dashboard">Terug naar dashboard</router-link></button>
+      </div>
+      <div class="back">
+        <button class= "btn-primary" v-show="details" @click="backOne">terug</button>
+        <button class= "btn-primary" v-show="check" @click="backTwo">terug</button>
+      </div>
     </div>
   </Container>
 </template>
@@ -67,12 +71,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .window{
+    position: relative;
     width: 78vw;
-    height: 80vh;
-    left: 338px;
-    top: 119px;
+    height: 83vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+  }
+
+  .next{
+    position: absolute;
+    bottom: calc(0% - 17.5px);
+    right: 120px;
+  }
+
+  .back{
+    position: absolute;
+    bottom: calc(0% - 17.5px);
+    right: 340px;
   }
 </style>
