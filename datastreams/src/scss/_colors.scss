@@ -3,7 +3,14 @@ $primary-blue: #33617B;
 $secondary-blue: #39B2E3;
 $primary-green: #7EBB05;
 $secondary-green: #4CB587;
+$primary-grey: #C7C7C7;
+$secondary-grey: #DDDDDD;
 $datastreams-silver: #E1E8F2;
+$selected: #E1E8F2;
+
+// Separation
+$separation-primary: $primary-grey;
+$separation-secondary: $secondary-grey;
 
 //Tile colors
 $green-tile: rgba($primary-green, 0.5);

@@ -1,0 +1,22 @@
+.documents{
+    .documents__title{
+        margin-top: 20px;
+    }
+    
+    .documents__files{
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 466px;
+        min-height: 466px;
+        max-width: 1280px;
+        min-width: 1280px;
+    }
+    
+    .documents__yearfiles{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1080px;
+        min-width: 1080px;
+        max-height: 466px;
+    }
+}
