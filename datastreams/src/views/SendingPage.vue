@@ -1,11 +1,24 @@
 <template>
   <Container title="Bestanden delen">
-    <h1>Bestanden delen</h1>
+    <h1>Bestanden delen met ontvanger</h1>
     <div class="window">
-      <SendingFiles v-show="sending"/>
-      <AddDetails v-show="details"/>
+
+      <Progress v-show="sending"/>
+      <div id="wrapper">
+      <ReceiverAdd v-show="sending"/>
+      <SelectReceiver v-show="sending"/>
+      </div>
+      
+      <Progress v-show="details"/>
+      <div id="wrapper">
+        <AddDetails v-show="details"/>
+        <AddDocs v-show="details"/>
+        <Privacy v-show="details"/>
+      </div>
+      
       <DetailCheck v-show="check"/>
       <Confirmation v-show="confirm"/>
+      
       <div class="next">
       <button class= "btn-primary" v-show="sending" @click="firstStep">Volgende</button>
       <button class= "btn-primary" v-show="details" @click="secondStep">Volgende</button>
@@ -13,8 +26,8 @@
       <button class= "btn-primary" v-show="confirm"><router-link class="path" to="/Dashboard">Terug naar dashboard</router-link></button>
       </div>
       <div class="back">
-        <button class= "btn-primary" v-show="details" @click="backOne">terug</button>
-        <button class= "btn-primary" v-show="check" @click="backTwo">terug</button>
+        <button class= "btn-primary" v-show="details" @click="backOne">Terug</button>
+        <button class= "btn-primary" v-show="check" @click="backTwo">Terug</button>
       </div>
     </div>
   </Container>
@@ -22,19 +35,27 @@
 
 <script>
 import Container from '../components/Container.vue'
-import SendingFiles from '../components/SendingFiles.vue'
+import ReceiverAdd from '../components/ReceiverAdd.vue'
 import AddDetails from '../components/AddDetails.vue'
 import DetailCheck from '../components/DetailCheck.vue'
 import Confirmation from '../components/Confirmation.vue'
+import Progress from '../components/Progress.vue'
+import SelectReceiver from '../components/SelectReceiver.vue'
+import AddDocs from '../components/AddDocs.vue'
+import Privacy from '../components/Privacy.vue'
 
 export default {
   name: 'SendingPage',
   components: {
     Container,
-    SendingFiles,
+    ReceiverAdd,
     AddDetails,
     DetailCheck,
-    Confirmation
+    Confirmation,
+    Progress,
+    SelectReceiver,
+    AddDocs,
+    Privacy
   },
   data() {
           return {
@@ -70,8 +91,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+  @import "../scss/_toplevel.scss";
+
   .window{
+    margin-top: 1rem;
     position: relative;
     width: 78vw;
     height: 83vh;
@@ -91,4 +115,10 @@ export default {
     bottom: calc(0% - 17.5px);
     right: 340px;
   }
+
+  #wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
 </style>
