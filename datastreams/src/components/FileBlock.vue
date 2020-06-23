@@ -1,14 +1,13 @@
 <template>
       <div class="file">
-          <div class="file__icon">
-              <div class="file__icon__text">JU</div>
+          <div class="file__icon"  v-bind:style="{ 'background-color': color }">
+              <div class="file__icon__text">{{ id }}</div>
           </div>
             <div class="file__type">
                 <img class="file__type__image" alt="File type" src="../assets/img/pdf.png">
             </div>
             <div class="file__name">
-                <p>Loonstrook test</p>
-                <p>datum</p>
+                <p>{{ type  }} {{ job }} {{ date }}</p>
             </div>
       </div>
 </template>
@@ -16,6 +15,13 @@
 <script>
 export default {
   name: 'FileBlock',
+  props: {
+      id: String,
+      job: String,
+      date: String,
+      type: String,
+      color: String
+  }
 }
 </script>
 
@@ -24,7 +30,7 @@ export default {
 @import "../scss/_toplevel.scss";
 
 .file{
-margin: 20px 25px 25px 0px;
+margin: 20px 25px 0px 0px;
 position: relative;
 width: 200px;
 height: 200px;
@@ -38,7 +44,7 @@ position: absolute;
 right: 0px;
 width: 40px;
 height: 40px;
-background-color: $green-tile;
+/*background-color: $green-tile;*/
 border-radius: 0px 12px 0px 5px;
 }
 
@@ -58,7 +64,7 @@ padding: 50px 0px 0px 57px;
 
 .file__name{
 position: absolute;
-margin-left: 17px;
+margin-left: 5px;
 margin-bottom: 4px;
 bottom: 0px;
 }

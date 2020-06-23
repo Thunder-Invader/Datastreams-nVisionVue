@@ -27,17 +27,16 @@ export default {
   border-radius: 10px;
 }
   .filter-box__component{
-          width: 100%;
-          background-color: transparent;
-          line-height: 18px;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='13' width='16'%3E%3Cpolygon points='1,1 8,13 15,1' style='fill:none;stroke:gray;stroke-width:1' /%3E%3C/svg%3E");
-          background-repeat: no-repeat;
-          outline: 0;
-          border: 1px solid transparent;
-          border-bottom: 1px solid gray;
-          border-radius: 0;
-          background-position: 100% center;
-          font-size: 14px;
-          }
-
+  width: 100%;
+  background-color: transparent;
+  line-height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='13' width='16'%3E%3Cpolygon points='1,1 8,13 15,1' style='fill:none;stroke:gray;stroke-width:1' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+  background-position: 100% center;
+  font-size: 14px;
+}
 </style>
