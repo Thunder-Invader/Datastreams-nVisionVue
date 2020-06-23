@@ -8,7 +8,7 @@
     position: relative;
     min-width: 78vw;
     max-width: 78vw;
-    min-height: 50vh;
+    min-height: 30vh;
     max-height: 50vh;
     padding: 15px 20px;
     margin-bottom: 5rem;
@@ -22,13 +22,19 @@
     max-height: 65vh;
     margin-bottom: 2rem;
     overflow: auto;
+  }
 
-    table {
+  .sources__icon {
+    width: 1.5vw;
+    height: 1.5vh;
+  }
+
+  table {
       min-width: percentage($number: 10/10);
     }
 
-    th,
-    td {
+  th,
+  td {
       min-width: percentage($number: 1/5);
       max-width: 10rem;
       height: 50px;
@@ -39,21 +45,27 @@
       border-bottom: 1px solid $separation-primary;
     }
 
-    td {
+  td {
       white-space: normal;
     }
 
     .all-reviews__categories__category {
-      border-bottom: 2.5px solid $separation-secondary;
+      border-bottom: 1px solid $separation-primary;
     }
 
     .all-reviews__categories__date {
       white-space: nowrap;
     }
-  }
 
-  .sources__icon {
-    width: 2vw;
-    height: 2vh;
+
+  tr {
+    &:hover,
+    &:focus {
+      background-color: $selected;
+    }
+
+    td {
+      border-bottom: 1px solid $separation-primary;
+    }
   }
 }

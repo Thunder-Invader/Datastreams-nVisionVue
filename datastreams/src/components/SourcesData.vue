@@ -5,11 +5,11 @@
         <td>{{ documenten }}</td>
         <td>
             <img v-if="status=='1'"
-                 src="../assets/svg/gear.svg"
+                 src="../assets/svg/circle_true.svg"
                  alt="true"
                  class="sources__icon">
             <img v-if="status=='0'"
-                 src="../assets/svg/share.svg"
+                 src="../assets/svg/circle_false.svg"
                  alt="false"
                  class="sources__icon">
         </td>
@@ -30,15 +30,4 @@
 
 <style lang="scss" scoped>
     @import "../scss/_toplevel.scss";
-
-    tr {
-        &:hover,
-        &:focus {
-            background-color: $selected;
-        }
-
-        td {
-            border-bottom: 1px solid $separation-primary;
-        }
-    }
 </style>
