@@ -1,7 +1,7 @@
 <template>
       <div class="file">
           <div class="file__icon"  v-bind:style="{ 'background-color': color }">
-              <div class="file__icon__text">{{ id }}</div>
+              <div class="file__icon__content">{{ id }}</div>
           </div>
             <div class="file__type">
                 <img class="file__type__image" alt="File type" src="../assets/img/pdf.png">
