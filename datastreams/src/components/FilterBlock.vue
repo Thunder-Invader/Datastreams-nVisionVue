@@ -1,6 +1,6 @@
 <template>
-  <div class=filter-box>
-    <input class=filter-box__component type="text" placeholder="Filteren op...">
+  <div class="filter-box">
+    <input class="filter-box__component" type="text" placeholder="Filteren op...">
   </div>
 </template>
 
@@ -12,31 +12,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-.filter-box{
-  display: flex;
-  flex-wrap: wrap;
-  height: 35px;
-  width: 300px;
-  background-color: white;
-  margin-top: 39px;
-  padding: 8px 14px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-  .filter-box__component{
-  width: 100%;
-  background-color: transparent;
-  line-height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='13' width='16'%3E%3Cpolygon points='1,1 8,13 15,1' style='fill:none;stroke:gray;stroke-width:1' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  outline: 0;
-  border: 1px solid transparent;
-  border-bottom: 1px solid gray;
-  border-radius: 0;
-  background-position: 100% center;
-  font-size: 14px;
-}
+<style lang="scss">
+@import "../scss/_toplevel.scss";
 </style>
