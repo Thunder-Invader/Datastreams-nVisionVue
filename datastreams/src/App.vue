@@ -8,7 +8,7 @@
                   <router-link to="/Dashboard"><li><img class="icon" src="./assets/svg/dashboard.svg">Dashboard</li></router-link>
                   <router-link to="/Documents"><li><img class="icon" src="./assets/svg/documents.svg">Documenten</li></router-link>
                   <router-link to="/Messages"><li><img class="icon" src="./assets/svg/messages.svg">Berichten</li></router-link>
-                  <a href="#"><li><img class="icon" src="./assets/svg/sources.svg">Bronnen</li></a>
+                  <router-link to="/Sources"><li><img class="icon" src="./assets/svg/sources.svg">Bronnen</li></router-link>
                   <router-link to="/Sending"><li><img class="icon" src="./assets/svg/share.svg">Bestanden delen</li></router-link>                  
               </ul> 
               <div class="log_out">
