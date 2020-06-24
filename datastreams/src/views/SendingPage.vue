@@ -3,13 +3,12 @@
     <h1>Bestanden delen met ontvanger</h1>
     <div class="window">
 
-      <Progress v-show="sending" />
+      <Progress :stage=progressStage />
       <div id="wrapper">
         <ReceiverAdd v-show="sending" />
         <SelectReceiver v-show="sending" />
       </div>
-
-      <Progress v-show="details" />
+      
       <div id="wrapper">
         <div id="wrapperleft">
         <AddDetails v-show="details" />
@@ -49,50 +48,56 @@
   import AddDocs from '../components/AddDocs.vue'
   import Privacy from '../components/Privacy.vue'
 
-  export default {
-    name: 'SendingPage',
-    components: {
-      Container,
-      ReceiverAdd,
-      AddDetails,
-      DetailCheck,
-      Confirmation,
-      Progress,
-      SelectReceiver,
-      AddDocs,
-      Privacy
-    },
-    data() {
-      return {
-        sending: true,
-        details: false,
-        check: false,
-        confirm: false
-      };
-    },
-    methods: {
-      firstStep() {
-        this.details = true;
-        this.sending = false;
-      },
-      backOne() {
-        this.sending = true;
-        this.details = false;
-      },
-      secondStep() {
-        this.check = true;
-        this.details = false;
-      },
-      backTwo() {
-        this.details = true;
-        this.check = false;
-      },
-      thirdStep() {
-        this.confirm = true;
-        this.check = false;
+export default {
+  name: 'SendingPage',
+  components: {
+    Container,
+    ReceiverAdd,
+    AddDetails,
+    DetailCheck,
+    Confirmation,
+    Progress,
+    SelectReceiver,
+    AddDocs,
+    Privacy
+  },
+  data() {
+          return {
+                sending: true,
+                details: false,
+                check: false,
+                confirm: false,
+                progressStage: 1
+            };
+        },
+        methods: {
+            firstStep() {
+                this.details = true;
+                this.sending = false;
+                this.progressStage = 2;
+            },
+            backOne() {
+                this.sending = true;
+                this.details = false;
+                this.progressStage = 1;
+            },
+            secondStep() {
+                this.check = true;
+                this.details = false;
+                this.progressStage = 3;
+            },
+            backTwo() {
+                this.details = true;
+                this.check = false;
+                this.progressStage = 2;
+            },
+            thirdStep() {
+                this.confirm = true;
+                this.check = false;
+            }
       }
-    }
-  };
+    };
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
