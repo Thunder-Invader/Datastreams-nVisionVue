@@ -21,6 +21,7 @@
                     />
                 </table>
             </div>
+            <button class="sources__component__action sources__component__action--no-center btn-primary">bron toevoegen</button>
         </div>
         </div>
     </Container>
