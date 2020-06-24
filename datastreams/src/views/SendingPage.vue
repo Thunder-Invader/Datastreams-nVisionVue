@@ -3,13 +3,12 @@
     <h1>Bestanden delen met ontvanger</h1>
     <div class="window">
 
-      <Progress v-show="sending"/>
+      <Progress :stage=progressStage />
       <div id="wrapper">
       <ReceiverAdd v-show="sending"/>
       <SelectReceiver v-show="sending"/>
       </div>
       
-      <Progress v-show="details"/>
       <div id="wrapper">
         <AddDetails v-show="details"/>
         <AddDocs v-show="details"/>
@@ -62,25 +61,30 @@ export default {
                 sending: true,
                 details: false,
                 check: false,
-                confirm: false
+                confirm: false,
+                progressStage: 1
             };
         },
         methods: {
             firstStep() {
                 this.details = true;
                 this.sending = false;
+                this.progressStage = 2;
             },
             backOne() {
                 this.sending = true;
                 this.details = false;
+                this.progressStage = 1;
             },
             secondStep() {
                 this.check = true;
                 this.details = false;
+                this.progressStage = 3;
             },
             backTwo() {
                 this.details = true;
                 this.check = false;
+                this.progressStage = 2;
             },
             thirdStep() {
                 this.confirm = true;

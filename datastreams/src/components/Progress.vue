@@ -2,17 +2,19 @@
   <div class="wrapper">
  
     <div class="component_progress">
-      <div class="progress_circle">
+      <div class="progress_circle" v-bind:class="[stage<1 && 'unactive']">
         <div class="progress_circle_text">1</div>
-        <div class="progress_currenttask">Selecteer de ontvanger</div>
+        <div class="progress_currenttask" v-bind:class="[stage!=1 && 'hidden']">Selecteer de ontvanger</div>
       </div>
-      <hr class="progress_line unactive">
-      <div class="progress_circle unactive">
+      <hr class="progress_line" v-bind:class="[stage<2 && 'unactive']">
+      <div class="progress_circle" v-bind:class="[stage<2 && 'unactive']">
         <div class="progress_circle_text">2</div>
+        <div class="progress_currenttask" v-bind:class="[stage!=2 && 'hidden']">Berichten en bestanden toevoegen</div>
       </div>
-      <hr class="progress_line unactive">
-      <div class="progress_circle unactive">
+      <hr class="progress_line" v-bind:class="[stage<3 && 'unactive']">
+      <div class="progress_circle" v-bind:class="[stage<3 && 'unactive']">
         <div class="progress_circle_text">3</div>
+        <div class="progress_currenttask" v-bind:class="[stage!=3 && 'hidden']">Gegevens controleren</div>
       </div>
     </div>
     </div>
@@ -22,7 +24,9 @@
 <script>
   export default {
     name: 'ReceiverAdd',
-    props: {}
+    props: [
+      'stage'
+    ]
   };
 
 </script>
@@ -40,7 +44,7 @@
     position: absolute;
     font-weight: bold;
     margin-top: 30px;
-    margin-left:-65px;
+    margin-left:-75px;
     color: grey;
     font-size: 16px;
   }
@@ -62,6 +66,10 @@
 
   .unactive{
     opacity: 0.2;
+  }
+
+  .hidden {
+    visibility: hidden;
   }
 
   .progress_line{
