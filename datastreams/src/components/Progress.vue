@@ -44,7 +44,7 @@
     position: absolute;
     font-weight: bold;
     margin-top: 30px;
-    margin-left:-75px;
+    margin-left: -6%;
     color: grey;
     font-size: 16px;
   }

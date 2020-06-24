@@ -18,7 +18,16 @@
           <Privacy v-show="details" />
         </div>
       </div>
-      <DetailCheck v-show="check" />
+
+      <div id="wrapper">
+        <div id="wrapperleft">
+        <CompletedMsg v-show="check" />
+        </div>
+        <div id="wrapperright">
+          <AddDocs v-show="check" />
+          <Privacy v-show="check" />
+        </div>
+      </div>
       <Confirmation v-show="confirm" />
 
       <div class="next">
@@ -41,7 +50,7 @@
   import Container from '../components/Container.vue'
   import ReceiverAdd from '../components/ReceiverAdd.vue'
   import AddDetails from '../components/AddDetails.vue'
-  import DetailCheck from '../components/DetailCheck.vue'
+  import CompletedMsg from '../components/CompletedMsg.vue'
   import Confirmation from '../components/Confirmation.vue'
   import Progress from '../components/Progress.vue'
   import SelectReceiver from '../components/SelectReceiver.vue'
@@ -54,12 +63,12 @@ export default {
     Container,
     ReceiverAdd,
     AddDetails,
-    DetailCheck,
     Confirmation,
     Progress,
     SelectReceiver,
     AddDocs,
-    Privacy
+    Privacy,
+    CompletedMsg
   },
   data() {
           return {

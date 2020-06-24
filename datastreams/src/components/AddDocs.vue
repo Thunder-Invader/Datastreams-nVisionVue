@@ -1,40 +1,36 @@
 <template>
-  <div class="wrapper">
-    <div class="component_adddocs">
-      <h4 class="component-title title-blob">
-        Document Toevoegen
-      </h4>
-      <div class="component document">
-        <div class="document_items">
-          <div class="document_item">
-            <div class="dashboard__component__items__item__sender--green">
-              JU
+  <div class="dashboard__component1">
+          <h4 class="dashboard__component__title title-blob">
+            Toevoegen van bestanden
+          </h4>
+          <div class="dashboard__component__items">
+            <div class="dashboard__component__items__item">
+              <div class="dashboard__component__items__item__sender dashboard__component__items__item__sender--green">
+                ju
+              </div>
+              <div class="dashboard__component__items__item__content">
+                Loonstrook Datastreams 04-2020
+              </div>
             </div>
-            <div class="document_item_content">
-              Loonstrook Jumbo 04-2020
+            <div class="dashboard__component__items__item">
+              <div class="dashboard__component__items__item__sender dashboard__component__items__item__sender--green">
+                ju
+              </div>
+              <div class="dashboard__component__items__item__content">
+                Loonstrook Datastreams 03-2020
+              </div>
             </div>
-          </div>
-          <div class="document_item">
-            <div class="dashboard__component__items__item__sender--blue">
-              JU
+            <div class="dashboard__component__items__item">
+              <div class="dashboard__component__items__item__sender dashboard__component__items__item__sender--green">
+                ju
+              </div>
+              <div class="dashboard__component__items__item__content">
+                Loonstrook Datastreams 02-2020
+              </div>
             </div>
-            <div class="document_item_content">
-              Loonstrook Jumbo 04-2020
-            </div>
-          </div>
-          <div class="document_item">
-            <div class="dashboard__component__items__item__sender--blue">
-              JU
-            </div>
-            <div class="document_item_content">
-              Loonstrook Jumbo 04-2020
-            </div>
+            
           </div>
         </div>
-
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -45,18 +41,18 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-  @import "../scss/_toplevel.scss";
+<style lang="scss">
 
-  .component_adddocs {
+    .dashboard__component1{
     margin-top: 5rem;
     margin-left: 6rem;
     width: 300px;
-  }
+    }
 
-  .document_item{
+   .dashboard__component__items__item {
         display: flex;
         align-items: center;
+        
 
         &:not(:last-child) {
             margin-bottom: 20px;
@@ -77,25 +73,33 @@
         }
 
         .dashboard__component__items__item__sender--green {
-            background-color: rgba(#7EBB05, 0.5) ;
+            background-color: rgba(#7EBB05, 0.5);
         }
 
         .dashboard__component__items__item__sender--blue {
-            background-color: $blue-tile;
+            background-color: rgba(#39B2E3, 0.5);
         }
 
         .dashboard__component__items__item__sender--gray {
-            background-color: $gray-tile;
+            background-color: rgba(#33617B, 0.5);
         }
 
         .dashboard__component__items__item__content {
             font-size: 0.875rem;
         }
     }
-    .document_item_content {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 5px;
+
+
+    .dashboard__component__add {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
-  
+
+    .dashboard__component__content {
+        display: flex;
+        justify-content: space-between
+    }
+
 </style>
