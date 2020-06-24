@@ -3,98 +3,103 @@
     <h1>Bestanden delen met ontvanger</h1>
     <div class="window">
 
-      <Progress v-show="sending"/>
+      <Progress v-show="sending" />
       <div id="wrapper">
-      <ReceiverAdd v-show="sending"/>
-      <SelectReceiver v-show="sending"/>
+        <ReceiverAdd v-show="sending" />
+        <SelectReceiver v-show="sending" />
       </div>
-      
-      <Progress v-show="details"/>
+
+      <Progress v-show="details" />
       <div id="wrapper">
-        <AddDetails v-show="details"/>
-        <AddDocs v-show="details"/>
-        <Privacy v-show="details"/>
+        <div id="wrapperleft">
+        <AddDetails v-show="details" />
+        </div>
+        <div id="wrapperright">
+          <AddDocs v-show="details" />
+          <Privacy v-show="details" />
+        </div>
       </div>
-      
-      <DetailCheck v-show="check"/>
-      <Confirmation v-show="confirm"/>
-      
+      <DetailCheck v-show="check" />
+      <Confirmation v-show="confirm" />
+
       <div class="next">
-      <button class= "btn-primary" v-show="sending" @click="firstStep">Volgende</button>
-      <button class= "btn-primary" v-show="details" @click="secondStep">Volgende</button>
-      <button class= "btn-primary" v-show="check" @click="thirdStep">Volgende</button>     
-      <button class= "btn-primary" v-show="confirm"><router-link class="path" to="/Dashboard">Terug naar dashboard</router-link></button>
+        <button class="btn-primary" v-show="sending" @click="firstStep">Volgende</button>
+        <button class="btn-primary" v-show="details" @click="secondStep">Volgende</button>
+        <button class="btn-primary" v-show="check" @click="thirdStep">Volgende</button>
+        <button class="btn-primary" v-show="confirm">
+          <router-link class="path" to="/Dashboard">Terug naar dashboard</router-link>
+        </button>
       </div>
       <div class="back">
-        <button class= "btn-primary" v-show="details" @click="backOne">Terug</button>
-        <button class= "btn-primary" v-show="check" @click="backTwo">Terug</button>
+        <button class="btn-primary" v-show="details" @click="backOne">Terug</button>
+        <button class="btn-primary" v-show="check" @click="backTwo">Terug</button>
       </div>
     </div>
   </Container>
 </template>
 
 <script>
-import Container from '../components/Container.vue'
-import ReceiverAdd from '../components/ReceiverAdd.vue'
-import AddDetails from '../components/AddDetails.vue'
-import DetailCheck from '../components/DetailCheck.vue'
-import Confirmation from '../components/Confirmation.vue'
-import Progress from '../components/Progress.vue'
-import SelectReceiver from '../components/SelectReceiver.vue'
-import AddDocs from '../components/AddDocs.vue'
-import Privacy from '../components/Privacy.vue'
+  import Container from '../components/Container.vue'
+  import ReceiverAdd from '../components/ReceiverAdd.vue'
+  import AddDetails from '../components/AddDetails.vue'
+  import DetailCheck from '../components/DetailCheck.vue'
+  import Confirmation from '../components/Confirmation.vue'
+  import Progress from '../components/Progress.vue'
+  import SelectReceiver from '../components/SelectReceiver.vue'
+  import AddDocs from '../components/AddDocs.vue'
+  import Privacy from '../components/Privacy.vue'
 
-export default {
-  name: 'SendingPage',
-  components: {
-    Container,
-    ReceiverAdd,
-    AddDetails,
-    DetailCheck,
-    Confirmation,
-    Progress,
-    SelectReceiver,
-    AddDocs,
-    Privacy
-  },
-  data() {
-          return {
-                sending: true,
-                details: false,
-                check: false,
-                confirm: false
-            };
-        },
-        methods: {
-            firstStep() {
-                this.details = true;
-                this.sending = false;
-            },
-            backOne() {
-                this.sending = true;
-                this.details = false;
-            },
-            secondStep() {
-                this.check = true;
-                this.details = false;
-            },
-            backTwo() {
-                this.details = true;
-                this.check = false;
-            },
-            thirdStep() {
-                this.confirm = true;
-                this.check = false;
-            }
+  export default {
+    name: 'SendingPage',
+    components: {
+      Container,
+      ReceiverAdd,
+      AddDetails,
+      DetailCheck,
+      Confirmation,
+      Progress,
+      SelectReceiver,
+      AddDocs,
+      Privacy
+    },
+    data() {
+      return {
+        sending: true,
+        details: false,
+        check: false,
+        confirm: false
+      };
+    },
+    methods: {
+      firstStep() {
+        this.details = true;
+        this.sending = false;
+      },
+      backOne() {
+        this.sending = true;
+        this.details = false;
+      },
+      secondStep() {
+        this.check = true;
+        this.details = false;
+      },
+      backTwo() {
+        this.details = true;
+        this.check = false;
+      },
+      thirdStep() {
+        this.confirm = true;
+        this.check = false;
       }
-};
+    }
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   @import "../scss/_toplevel.scss";
 
-  .window{
+  .window {
     margin-top: 1rem;
     position: relative;
     width: 78vw;
@@ -104,21 +109,26 @@ export default {
     border-radius: 10px;
   }
 
-  .next{
+  .next {
     position: absolute;
     bottom: calc(0% - 17.5px);
     right: 120px;
   }
 
-  .back{
+  .back {
     position: absolute;
     bottom: calc(0% - 17.5px);
     right: 340px;
   }
 
-  #wrapper{
+  #wrapper {
     display: flex;
     flex-direction: row;
   }
-
+  #wrapperright{
+    display: flex;
+    flex-direction: column;
+ 
+  }
+  
 </style>

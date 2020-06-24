@@ -36,7 +36,7 @@
   }
 
   form{
-    width: 500px;
+    width: 800px;
   }
 
   .left-part,
@@ -61,6 +61,7 @@
     background: transparent;
     border: none;
     border-bottom: 1px solid grey;
+    width: 450px;
   }
 
   input::placeholder {
@@ -98,7 +99,7 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .imgtext{
-    width: 150%;
+    width: 700px;
   }
 
 </style>
