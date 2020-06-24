@@ -6,10 +6,10 @@
             <div class="sources__categories">
                 <table>
                     <tr>
-                        <th class="all-reviews__categories__category">Gekoppelde mails</th>
-                        <th class="all-reviews__categories__category">Koppeling naam</th>
-                        <th class="all-reviews__categories__category">Gekoppelde documenten</th>
-                        <th class="all-reviews__categories__category">Status</th>
+                        <th class="sources__categories__category">Gekoppelde mails</th>
+                        <th class="sources__categories__category">Koppeling naam</th>
+                        <th class="sources__categories__category">Gekoppelde documenten</th>
+                        <th class="sources__categories__category">Status</th>
                     </tr>
                     <SourcesData
                             v-for="source in sourcedata"
