@@ -2,7 +2,6 @@
   <Container title="Bestanden delen">
     <h1>Bestanden delen met ontvanger</h1>
     <div class="window">
-
       <Progress :stage=progressStage />
       <div id="wrapper">
         <ReceiverAdd v-show="sending" />
@@ -15,6 +14,7 @@
         </div>
         <div id="wrapperright">
           <AddDocs v-show="details" />
+          <img class="plus" src="../assets/img/AddWidget.png" v-show="details">
           <Privacy v-show="details" />
         </div>
       </div>
@@ -143,6 +143,12 @@ export default {
     display: flex;
     flex-direction: column;
  
+  }
+  .plus{
+    width: 50px;
+    margin-left: 200px;
+    margin-top: 10px;
+    position: relative;
   }
   
 </style>

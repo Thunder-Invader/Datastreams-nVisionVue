@@ -87,7 +87,7 @@
     }
 
     .component_privacy {
-        margin-top: 5rem;
+        margin-top: 3rem;
         margin-left: 6rem;
     }
 </style>
