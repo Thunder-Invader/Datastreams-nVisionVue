@@ -14,5 +14,7 @@ export default {
 <style scoped>
 .container{
   padding: 70px 65px;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 </style>
