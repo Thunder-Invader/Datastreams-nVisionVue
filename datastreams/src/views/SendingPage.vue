@@ -31,9 +31,9 @@
         <button class="btn-primary" v-show="sending" @click="firstStep">Volgende</button>
         <button class="btn-primary" v-show="details" @click="secondStep">Volgende</button>
         <button class="btn-primary" v-show="check" @click="thirdStep">Volgende</button>
-        <button class="btn-primary" v-show="confirm">
-          <router-link class="path" to="/Dashboard">Terug naar dashboard</router-link>
-        </button>
+        <router-link class="path" to="/Dashboard"><button class="btn-primary" v-show="confirm">
+          Terug naar dashboard
+        </button></router-link>
       </div>
       <div class="back">
         <button class="btn-primary" v-show="details" @click="backOne">Terug</button>
