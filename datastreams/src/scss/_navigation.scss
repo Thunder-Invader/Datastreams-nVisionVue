@@ -16,70 +16,73 @@
   
   .wrapper{
     display: flex;
-    //position: absolute;
-  }
-  
-  .wrapper .navigation{
-    width: 273px;
-    height: 100%;
-    background: #33617B;
-    padding: 30px 0px;
-    position: fixed;
-  }
-  
-  .wrapper .navigation ul a li{
-    padding-bottom: 22px;
-    padding-top: 22px;
-    color: white;
-  }    
-  
-  .wrapper .navigation ul a{
-    color: #ffffff;
-    display: block;
-    text-decoration: none;
-  }
-  
-  .wrapper .navigation ul a li:hover,
-  .wrapper .navigation ul a li:focus
-  {
-    background-color: rgba(255, 255, 255, 0.5);
-  }   
-   
-  .wrapper .navigation .log_out{
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-    display: flex;
-  }
-  
-  .wrapper .navigation .log_out a{
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding-bottom: 30px;
-  }
-  
-  .wrapper .main_content{
-    width: 100%;
-    margin-left: 200px;
-  }
-  
-  .wrapper .main_content .header{
-    padding: 20px;
-    background: #fff;
-    color: #717171;
-    border-bottom: 1px solid #e0e4e8;
-  }
-  
-  .wrapper .main_content .info{
-    margin: 20px;
-    color: #717171;
-    line-height: 25px;
-  }
-  
-  .wrapper .main_content .info div{
-    margin-bottom: 20px;
+    
+    .navigation{
+      width: 273px;
+      height: 100%;
+      background: #33617B;
+      padding: 30px 0px;
+      position: fixed;
+      
+      ul a li{
+        padding-bottom: 22px;
+        padding-top: 22px;
+        color: white;
+
+        &:hover,
+        &:focus {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+      }    
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      ul a{
+        color: #ffffff;
+        display: block;
+        text-decoration: none;
+      }
+
+      .log_out{
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        display: flex;
+
+        a{
+          text-align: center;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+          padding-bottom: 30px;
+        }
+
+        .main_content{
+          width: 100%;
+          margin-left: 200px;
+
+          .header{
+            padding: 20px;
+            background: #fff;
+            color: #717171;
+            border-bottom: 1px solid #e0e4e8;
+          }
+
+          .info{
+            margin: 20px;
+            color: #717171;
+            line-height: 25px;
+
+            div{
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .fade {
