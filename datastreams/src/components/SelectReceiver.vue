@@ -4,7 +4,6 @@
             <h4 class="component-title title-blob">
                 Kies ontvanger
             </h4>
-            
             <div class="component selectontvanger">
                 <img class="ontvanger_foto" src="../assets/img/receiver1.png">
                 <div class="selectontvanger_title">
@@ -14,7 +13,6 @@
                     Fontys Hogescholen <br><br>
                     geert-janssen@info-hypoleen.nl
                 </div>
-
             </div>
             <div class="component selectontvanger">
                 <img class="ontvanger_foto" src="../assets/img/receiver2.png">
@@ -25,7 +23,6 @@
                     hypotheekaanvragen<br><br>
                     bert-janssen@info-hypoleen.nl
                 </div>
-
             </div>
             <div class="component selectontvanger">
                 <img class="ontvanger_foto" src="../assets/img/receiver3.png">
@@ -36,7 +33,6 @@
                     Occidental Potroleum<br><br>
                     afid-janssen@info-hypoleen.nl
                 </div>
-
             </div>
             <div class="component selectontvanger">
                 <img class="ontvanger_foto" src="../assets/img/receiver4.png">
@@ -47,7 +43,6 @@
                     Huis-hypotheek<br><br>
                     johan-janssen@info-hypoleen.nl
                 </div>
-
             </div>
         </div>
     </div>

@@ -13,21 +13,10 @@
               <input type="text" name="name" placeholder="Bedrijf">
               <input type="text" name="name" placeholder="Telefoon nummer">
               <input type="text" name="name" placeholder= "Gegevens ontvanger">
-              
             </div>
-            
             <button class= "btn-primary btn-form">Contact opslaan</button>
           </form>
-
         </div>
-        <div class="ontvanger_foto">
-
-        </div>
-        
-        <div class="ontvanger_button">
-
-        </div>
-
       </div>
     </div>
   </div>

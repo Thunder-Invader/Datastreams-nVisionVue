@@ -1,24 +1,23 @@
 <template v-show="sending">
   <div class="wrapper">
- 
     <div class="component_progress">
       <div class="progress_circle" v-bind:class="[stage<1 && 'unactive']">
         <div class="progress_circle_text">1</div>
-        <div class="progress_currenttask" v-bind:class="[stage!=1 && 'hidden']">Selecteer de ontvanger</div>
+        <div class="progress_currenttask circle1" v-bind:class="[stage!=1 && 'hidden']">Selecteer de ontvanger</div>
       </div>
       <hr class="progress_line" v-bind:class="[stage<2 && 'unactive']">
       <div class="progress_circle" v-bind:class="[stage<2 && 'unactive']">
         <div class="progress_circle_text">2</div>
-        <div class="progress_currenttask" v-bind:class="[stage!=2 && 'hidden']">Berichten en bestanden toevoegen</div>
+        <div class="progress_currenttask circle2" v-bind:class="[stage!=2 && 'hidden']">Berichten en bestanden toevoegen</div>
       </div>
       <hr class="progress_line" v-bind:class="[stage<3 && 'unactive']">
       <div class="progress_circle" v-bind:class="[stage<3 && 'unactive']">
         <div class="progress_circle_text">3</div>
-        <div class="progress_currenttask" v-bind:class="[stage!=3 && 'hidden']">Gegevens controleren</div>
+        <div class="progress_currenttask circle3" v-bind:class="[stage!=3 && 'hidden']">Gegevens controleren</div>
       </div>
     </div>
     </div>
-   
+
 </template>
 
 <script>
@@ -43,8 +42,7 @@
   .progress_currenttask{
     position: absolute;
     font-weight: bold;
-    margin-top: 30px;
-    margin-left: -6%;
+    
     color: grey;
     font-size: 16px;
   }
@@ -78,6 +76,17 @@
     width: 100px;
     margin-bottom: 4px;
   }
-
+  .circle1{
+    margin-top: 30px;
+    margin-left: -4%;
+  }
+  .circle2{
+    margin-top: 30px;
+    margin-left: -7%;
+  }
+  .circle3{
+    margin-top: 30px;
+    margin-left: -4%;
+  }
   
 </style>

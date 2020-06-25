@@ -3,33 +3,30 @@
     <h1>Bestanden delen met ontvanger</h1>
     <div class="window">
       <Progress :stage=progressStage />
-      <div id="wrapper">
+      <div class="wrapper1">
         <ReceiverAdd v-show="sending" />
         <SelectReceiver v-show="sending" />
       </div>
-      
-      <div id="wrapper">
-        <div id="wrapperleft">
+      <div class="wrapper1">
+        <div class="wrapperleft">
         <AddDetails v-show="details" />
         </div>
-        <div id="wrapperright">
+        <div class="wrapperright">
           <AddDocs v-show="details" />
           <img class="plus" src="../assets/img/AddWidget.png" v-show="details">
           <Privacy v-show="details" />
         </div>
       </div>
-
-      <div id="wrapper">
-        <div id="wrapperleft">
+      <div class="wrapper1">
+        <div class="wrapperleft">
         <CompletedMsg v-show="check" />
         </div>
-        <div id="wrapperright">
+        <div class="wrapperright">
           <AddDocs v-show="check" />
           <Privacy v-show="check" />
         </div>
       </div>
       <Confirmation v-show="confirm" />
-
       <div class="next">
         <button class="btn-primary" v-show="sending" @click="firstStep">Volgende</button>
         <button class="btn-primary" v-show="details" @click="secondStep">Volgende</button>
@@ -45,7 +42,6 @@
     </div>
   </Container>
 </template>
-
 <script>
   import Container from '../components/Container.vue'
   import ReceiverAdd from '../components/ReceiverAdd.vue'
@@ -135,10 +131,11 @@ export default {
     right: 340px;
   }
 
-  #wrapper {
+  .wrapper1 {
     display: flex;
     flex-direction: row;
   }
+  
   #wrapperright{
     display: flex;
     flex-direction: column;

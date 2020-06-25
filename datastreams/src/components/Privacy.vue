@@ -14,7 +14,6 @@
                             <option>Downloaden toestaan</option>
                             <option>Downloaden niet toestaan</option>
                         </select>
-
                     </div>
                 </form>
             </div>

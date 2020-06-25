@@ -10,10 +10,8 @@
               <input class="fname" type="text" name="name" placeholder="Onderwerp">
               <img src="../assets/img/textarea.png" class="imgtext">
               <textarea class="textarea"></textarea>
-              
             </div>
           </form>
-
       </div>
     </div>
   </div>

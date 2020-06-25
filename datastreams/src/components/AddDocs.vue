@@ -44,8 +44,8 @@
 <style lang="scss">
 
     .dashboard__component1{
-    margin-top: 5rem;
-    margin-left: 6rem;
+    margin-top: 5rem !important;
+    margin-left: 6rem !important;
     width: 300px;
     }
 

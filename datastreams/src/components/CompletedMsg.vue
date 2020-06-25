@@ -9,7 +9,6 @@
                     <div class="completedmsg_contact_photo">
                         <img class="receiver" src="../assets/img/receiver1.png">
                     </div>
-
                     <div class="completedmsg_contact_info">
                         <b>Geert Janssen | Hypoleen</b><br><br>
                         Fontys Hogescholen<br><br>
@@ -28,10 +27,7 @@
                     porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
                     feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
                     imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. <br><br>
-
                     Lirum Thijs
-
-
                 </div>
             </div>
         </div>
