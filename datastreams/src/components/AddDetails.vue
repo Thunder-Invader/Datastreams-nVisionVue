@@ -37,8 +37,6 @@
     width: 800px;
   }
 
-  .left-part,
-
   .left-part {
     text-align: center;
   }
